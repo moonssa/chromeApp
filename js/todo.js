@@ -9,10 +9,7 @@ function saveTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 function deleteToDo(event) {
-  console.log(event.target.parentElement);
   const li = event.target.parentElement;
-  console.log(li.id);
-
   toDos = toDos.filter((item) => item.id !== parseInt(li.id));
   saveTodos();
   li.remove();
